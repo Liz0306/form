@@ -17,10 +17,14 @@
             <span class="validation-msg" id="nombre-validation"></span>
             
             <!-- Correo Electrónico -->
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">Correo Institucional:</label>
             <input type="email" id="email" name="email" required>
             <span class="validation-msg" id="email-validation"></span>
             
+            <!-- Numero de control -->
+            <label for="numero">Número de Control:</label>
+            <input type="text" id="numero" name="numero" required>
+
             <!-- Contraseña -->
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required>
@@ -31,34 +35,27 @@
             <input type="password" id="confirmPassword" name="confirmPassword" required>
             <span class="validation-msg" id="confirm-password-validation"></span>
             
-            <!-- Fecha de Nacimiento -->
-            <label for="birthDate">Fecha de Nacimiento:</label>
-            <input type="date" id="birthDate" name="birthDate" required>
-            <span class="validation-msg" id="birthDate-validation"></span>
             
-            <!-- Género -->
-            <label>Género:</label>
-            <div class="gender-options">
-                <label><input type="radio" name="gender" value="Masculino" required> Masculino</label>
-                <label><input type="radio" name="gender" value="Femenino" required> Femenino</label>
-                <label><input type="radio" name="gender" value="Otro" required> Otro</label>
-            </div>
+            
+            <!-- Tienes carro -->
+            <label for= "respuesta">Tienes Carro:</label>
+            <select id="respuesta" name="respuesta" onchange="mostrarSeccion()">
+                <option value="null">-Selecciona-</option>
+                <option value="no">No</option>
+                <option value="si">Si</option>
+            </select>
 
-            <!-- Preferencias -->
-            <label>Preferencias:</label>
-            <div class="preferences">
-                <label><input type="checkbox" name="preferences" value="Noticias"> Noticias</label>
-                <label><input type="checkbox" name="preferences" value="Ofertas"> Ofertas</label>
-                <label><input type="checkbox" name="preferences" value="Actualizaciones"> Actualizaciones</label>
-            </div>
+            <!-------Seleccion oculta------->
+            <div id="extra-section">
+            <!-- Placas -->
+            <label for="placas">Placas:</label>
+            <input type="text" id="placas" name="placas">
             
             <!-- Adjuntar archivo -->
-            <label for="archivo">Adjuntar un archivo:</label>
+             <label>Licencia:</label>
+            <label for="archivo">Tome una foto a su licencia y subela para su verificacion.</label>
             <input type="file" id="archivo" name="archivo">
-            
-            <!-- Comentarios -->
-            <label for="comments">Comentarios adicionales:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
 
             <!-- Botones -->
             <div class="buttons">

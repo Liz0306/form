@@ -62,3 +62,17 @@ document.getElementById('registroForm').addEventListener('submit', function(even
         event.preventDefault();  // Evitar el envío si hay errores
     }
 });
+
+//----------------------------SECCION OCULTA---------------------------------------------
+
+function mostrarSeccion() {
+    const seleccion = document.getElementById("respuesta").value;
+    const extraSection = document.getElementById("extra-section");
+
+    if (seleccion === "si") {
+      extraSection.style.display = "block";
+    } else {
+      extraSection.style.display = "none";
+    }
+  }
+
